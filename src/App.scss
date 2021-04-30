@@ -9,11 +9,232 @@ $mainSpacing: 2px;
 $lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 $darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
+//---------------------test css realm-------------------------
+$font: "Sofia", sans-serif;
+$font-size: 16px;
+$blue: #0a4870;
+$blue2: #e3ebf1;
+$black: #000;
+$grey: #7d7d7d;
+$grey2: #f0f0f0;
+$grey3: #e8e7e7;
+$grey4: #fdfdfd;
+$bluegrey: #49606e;
+$orange: #ec992c;
+
+@mixin radius($val) {
+  -webkit-border-radius: $val;
+  -moz-border-radius: $val;
+  border-radius: $val;
+}
+
+@mixin cardsOpen() {
+  &::before {
+    background: rgba(10, 72, 112, 0.6);
+  }
+  .book-container {
+    .content {
+      opacity: 1;
+
+      transform: translateY(0px);
+    }
+  }
+
+  .informations-container {
+    transform: translateY(0px);
+    .more-information {
+      opacity: 1;
+    }
+  }
+}
+
+//--------------------end of test css realm-------------------
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font;
 }
+
+//---------------------test css realm 2-------------------------
+ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+  padding: 0;
+
+  .booking-card {
+    position: relative;
+    width: 300px;
+    display: flex;
+    flex: 0 0 300px;
+    flex-direction: column;
+
+    margin: 20px;
+    margin-bottom: 30px;
+    @include radius(10px);
+
+    overflow: hidden;
+
+    background-position: center center;
+    background-size: cover;
+
+    text-align: center;
+    color: $blue;
+
+    transition: 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background: rgba(10, 72, 112, 0);
+
+      transition: 0.3s;
+    }
+
+    .book-container {
+      height: 200px;
+      .content {
+        position: relative;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+        transform: translateY(-200px);
+
+        transition: 0.3s;
+
+        .btn {
+          border: 3px solid white;
+          padding: 10px 15px;
+
+          background: none;
+
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 1.3em;
+          color: white;
+
+          cursor: pointer;
+
+          transition: 0.3s;
+
+          &:hover {
+            background: white;
+
+            border: 0px solid white;
+
+            color: $blue;
+          }
+        }
+      }
+    }
+
+    .informations-container {
+      flex: 1 0 auto;
+
+      padding: 20px;
+
+      background: $grey2;
+
+      transform: translateY(206px);
+
+      transition: 0.3s;
+
+      .title {
+        position: relative;
+
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+
+        font-weight: bold;
+        font-size: 1.2em;
+
+        &::after {
+          content: "";
+
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+
+          height: 3px;
+          width: 50px;
+
+          margin: auto;
+
+          background: $blue;
+        }
+      }
+
+      .price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 10px;
+
+        .icon {
+          margin-right: 10px;
+        }
+      }
+
+      .more-information {
+        opacity: 0;
+
+        transition: 0.3s;
+        .info-and-date-container {
+          display: flex;
+
+          .box {
+            flex: 1 0;
+
+            padding: 15px;
+            margin-top: 20px;
+            @include radius(10px);
+
+            background: white;
+
+            font-weight: bold;
+            font-size: 0.9em;
+
+            .icon {
+              margin-bottom: 5px;
+            }
+
+            &.info {
+              color: $orange;
+
+              margin-right: 10px;
+            }
+          }
+        }
+        .disclaimer {
+          margin-top: 20px;
+
+          font-size: 0.8em;
+          color: $grey;
+        }
+      }
+    }
+
+    &:hover {
+      @include cardsOpen();
+    }
+  }
+}
+//--------------------end of test css realm 2-------------------
+
 // :root {
 //   // --primaryColor: #af9a7d;
 //   // --mainWhite: #fff;
@@ -31,7 +252,7 @@ body {
   padding-top: 66px;
   color: $mainBlack;
   background: $mainWhite;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  //font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.4;
 }
 h1 {
@@ -42,6 +263,9 @@ h1 {
 h2 {
   font-size: 2em;
   margin-bottom: 0.75em;
+  // Below was added for profile card component testing
+  color: #0a4870;
+  font-weight: 500;
 }
 h3 {
   font-size: 1.5em;
@@ -353,12 +577,87 @@ h6 {
   }
 }
 /* end pf featured rooms */
-/* room */
-.room {
+// /* room */
+// .room {
+//   box-shadow: $lightShadow;
+//   transition: $mainTransition;
+// }
+// .room:hover {
+//   box-shadow: $darkShadow;
+// }
+
+// .img-container {
+//   position: relative;
+//   img {
+//     width: 100%;
+//     display: block;
+//     transition: $mainTransition;
+//   }
+// }
+// // .img-container img {
+// //   width: 100%;
+// //   display: block;
+// //   transition: $mainTransition;
+// // }
+// .price-top {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   background: rgba(0, 0, 0, 0.8);
+//   color: $mainWhite;
+//   padding: 0.3rem 0.6rem 0.5rem;
+//   border-bottom-right-radius: 1rem;
+//   font-size: 0.5rem;
+//   text-align: center;
+//   transition: $mainTransition;
+//   h6 {
+//     margin-bottom: 0;
+//     font-size: 0.9rem;
+//     font-weight: 300;
+//     letter-spacing: $mainSpacing;
+//   }
+// }
+// // .price-top h6 {
+// //   margin-bottom: 0;
+// //   font-size: 0.9rem;
+// //   font-weight: 300;
+// //   letter-spacing: $mainSpacing;
+// // }
+// .room-link {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: scale(0);
+//   transition: all 0.3s linear;
+// }
+// .img-container:hover {
+//   background: rgba(0, 0, 0, 0.8);
+// }
+// .img-container:hover img {
+//   opacity: 0.3;
+// }
+// .img-container:hover .price-top {
+//   opacity: 0;
+// }
+// .img-container:hover .room-link {
+//   transform: translate(-50%, -50%) scale(1);
+// }
+// .room-info {
+//   background: $darkGrey;
+//   text-transform: capitalize;
+//   padding: 0.5rem 0;
+//   text-align: center;
+//   font-weight: 700;
+//   letter-spacing: $mainSpacing;
+// }
+// /* end of room  */
+
+/* profilecard */
+.profilecard {
   box-shadow: $lightShadow;
   transition: $mainTransition;
 }
-.room:hover {
+.profilecard:hover {
   box-shadow: $darkShadow;
 }
 
@@ -399,7 +698,7 @@ h6 {
 //   font-weight: 300;
 //   letter-spacing: $mainSpacing;
 // }
-.room-link {
+.profilecard-link {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -415,10 +714,10 @@ h6 {
 .img-container:hover .price-top {
   opacity: 0;
 }
-.img-container:hover .room-link {
+.img-container:hover .profilecard-link {
   transform: translate(-50%, -50%) scale(1);
 }
-.room-info {
+.profilecard-info {
   background: $darkGrey;
   text-transform: capitalize;
   padding: 0.5rem 0;
@@ -426,7 +725,8 @@ h6 {
   font-weight: 700;
   letter-spacing: $mainSpacing;
 }
-/* end of room  */
+/* end of profilecard  */
+
 /* single room*/
 
 .single-room {
@@ -535,6 +835,33 @@ h6 {
   }
 }
 /* end of roomlist */
+
+/* profileList */
+.profileslist {
+  padding: 5rem 0;
+}
+.profileslist-center {
+  width: 90vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 30px;
+}
+
+// @media screen and (min-width: 776px) {
+//   .profileslist-center {
+//     width: 90vw;
+//   }
+// }
+// @media screen and (min-width: 992px) {
+//   .profileslist-center {
+//     width: 95vw;
+//     max-width: 1170px;
+//   }
+// }
+/* end of profileList */
+
 /*  rooms fitler*/
 .filter-container {
   padding: 5rem 0;
