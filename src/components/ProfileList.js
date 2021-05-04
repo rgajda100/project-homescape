@@ -14,9 +14,14 @@ export default function ProfileList({ rooms }) {
   return (
     <section className="profileslist">
       <div className="profileslist-center">
-        {rooms.map((item) => {
-          return <TestCard key={item.id} room={item} />;
-        })}
+        {/* {rooms.map((item) => {
+          return <ProfileCard key={item.id} room={item} />;
+        })} */}
+        <ul>
+          {rooms.map((item) => {
+            return <TestCard key={item.id} room={item} />;
+          })}
+        </ul>
         {/* <TestCard /> */}
       </div>
     </section>

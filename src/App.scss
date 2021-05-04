@@ -58,8 +58,15 @@ $orange: #ec992c;
 }
 
 //---------------------test css realm 2-------------------------
+a {
+  text-decoration: none;
+  color: $mainWhite;
+}
+a:hover {
+  color: $blue;
+}
 ul {
-  display: flex;
+  display: inline;
   flex-wrap: wrap;
 
   list-style: none;
@@ -68,9 +75,9 @@ ul {
   .booking-card {
     position: relative;
     width: 300px;
-    display: flex;
-    flex: 0 0 300px;
-    flex-direction: column;
+    display: inline-block;
+    // flex: 0 0 300px;
+    // flex-direction: column;
 
     margin: 20px;
     margin-bottom: 30px;
@@ -843,10 +850,10 @@ h6 {
 .profileslist-center {
   width: 90vw;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 30px;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  // grid-row-gap: 2rem;
+  // grid-column-gap: 30px;
 }
 
 // @media screen and (min-width: 776px) {
