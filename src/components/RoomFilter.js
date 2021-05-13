@@ -53,23 +53,24 @@ export default function RoomFilter({ rooms }) {
     <section className="filter-container">
       <Title title="search Properties" />
       <form className="filter-form">
-        {/* Word Search */}
-        {/* <div className="form-group">
-          <label htmlFor="name">name</label>
+        {/* Room Price */}
+        <div className="form-group">
+          <label htmlFor="price">Location: {price} mi.</label>
           <input
-            type="text"
-            name="name"
-            id="name"
-            value={name}
+            type="range"
+            name="price"
+            min={minPrice}
+            max={maxPrice}
+            id="price"
+            value={price}
             onChange={handleChange}
             className="form-control"
           />
-        </div> */}
-
-        {/* End of Word Search */}
+        </div>
+        {/* End of Room Price */}
         {/* Select Type */}
         <div className="form-group">
-          <label htmlFor="type">room type</label>
+          <label htmlFor="type">Professional Service</label>
           <select
             name="type"
             id="type"
@@ -83,7 +84,7 @@ export default function RoomFilter({ rooms }) {
         {/* End of Select Type */}
         {/* Guests */}
         <div className="form-group">
-          <label htmlFor="capacity">Guests</label>
+          <label htmlFor="capacity">Style</label>
           <select
             name="capacity"
             id="capacity"
@@ -95,25 +96,9 @@ export default function RoomFilter({ rooms }) {
           </select>
         </div>
         {/* End of Guess */}
-        {/* Room Price */}
-        <div className="form-group">
-          <label htmlFor="price">room price ${price}</label>
-          <input
-            type="range"
-            name="price"
-            min={minPrice}
-            max={maxPrice}
-            id="price"
-            value={price}
-            onChange={handleChange}
-            className="form-control"
-          />
-        </div>
-        {/* End of Room Price */}
-
         {/* Size */}
         <div className="form-group">
-          <label htmlFor="size">room size (SQFT)</label>
+          <label htmlFor="size">Budget $-$$$</label>
           <div className="size-inputs">
             <input
               type="number"
@@ -135,8 +120,23 @@ export default function RoomFilter({ rooms }) {
         </div>
         {/* End of size */}
 
-        {/* Extras */}
+        {/* Word Search */}
         <div className="form-group">
+          <label htmlFor="name">Search</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={name}
+            onChange={handleChange}
+            className="form-control"
+          />
+        </div>
+
+        {/* End of Word Search */}
+
+        {/* Extras */}
+        {/* <div className="form-group">
           <div className="single-extra">
             <input
               type="checkbox"
@@ -158,7 +158,7 @@ export default function RoomFilter({ rooms }) {
             />
             <label htmlFor="pets">pets</label>
           </div>
-        </div>
+        </div> */}
 
         {/* End of Extras */}
       </form>

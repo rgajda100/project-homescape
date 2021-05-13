@@ -1,4 +1,5 @@
-$primaryColor: #af9a7d;
+$primaryColor: #96bbb2;
+$primaryColortwo: #af9a7d;
 $mainWhite: #fff;
 $offWhite: #f7f7f7;
 $mainBlack: #222;
@@ -36,12 +37,12 @@ $orange: #ec992c;
     .content {
       opacity: 1;
 
-      transform: translateY(0px);
+      transform: translateY(125px);
     }
   }
 
   .informations-container {
-    transform: translateY(0px);
+    transform: translateY(240px);
     .more-information {
       opacity: 1;
     }
@@ -74,7 +75,8 @@ ul {
 
   .booking-card {
     position: relative;
-    width: 300px;
+    width: 30%;
+    height: 540px;
     display: inline-block;
     // flex: 0 0 300px;
     // flex-direction: column;
@@ -90,6 +92,7 @@ ul {
 
     text-align: center;
     color: $blue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
     transition: 0.3s;
 
@@ -107,7 +110,7 @@ ul {
     }
 
     .book-container {
-      height: 200px;
+      height: 00px;
       .content {
         position: relative;
         opacity: 0;
@@ -154,7 +157,7 @@ ul {
 
       background: $grey2;
 
-      transform: translateY(206px);
+      transform: translateY(440px);
 
       transition: 0.3s;
 
@@ -240,6 +243,7 @@ ul {
     }
   }
 }
+
 //--------------------end of test css realm 2-------------------
 
 // :root {
@@ -342,6 +346,13 @@ h6 {
 .nav-header {
   display: flex;
   justify-content: space-between;
+  img {
+    max-width: 15vw;
+    height: auto;
+    &:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+  }
 }
 .nav-btn {
   background: transparent;
@@ -411,11 +422,13 @@ h6 {
 /* Hero */
 .defaultHero,
 .roomsHero {
-  min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  min-height: calc(100vh - 150px);
+  //background: $primaryColor center/cover no-repeat;
+  background: url("./images/tile_background.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .roomsHero {
   background-image: url("./images/room-2.jpeg");
@@ -580,7 +593,7 @@ h6 {
 @media screen and (min-width: 992px) {
   .featured-rooms-center {
     width: 95vw;
-    max-width: 1170px;
+    max-width: 75vw;
   }
 }
 /* end pf featured rooms */
@@ -672,6 +685,16 @@ h6 {
   position: relative;
   img {
     width: 100%;
+    height: 47vh;
+    object-fit: none;
+    display: block;
+    transition: $mainTransition;
+  }
+}
+.featured-img-container {
+  position: relative;
+  img {
+    width: 100%;
     display: block;
     transition: $mainTransition;
   }
@@ -713,10 +736,10 @@ h6 {
   transition: all 0.3s linear;
 }
 .img-container:hover {
-  background: rgba(0, 0, 0, 0.8);
+  //background: rgba(0, 0, 0, 0.8);
 }
 .img-container:hover img {
-  opacity: 0.3;
+  //opacity: 0.3;
 }
 .img-container:hover .price-top {
   opacity: 0;
@@ -749,6 +772,10 @@ h6 {
   img {
     width: 100%;
     display: block;
+    &:hover {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
   }
 }
 // .single-room-images img {
@@ -845,7 +872,7 @@ h6 {
 
 /* profileList */
 .profileslist {
-  padding: 5rem 0;
+  padding: 1rem 0;
 }
 .profileslist-center {
   width: 90vw;
@@ -871,7 +898,7 @@ h6 {
 
 /*  rooms fitler*/
 .filter-container {
-  padding: 5rem 0;
+  padding: 1rem 0;
 }
 .filter-form {
   width: 60vw;

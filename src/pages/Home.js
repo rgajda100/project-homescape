@@ -9,7 +9,10 @@ export default function Home() {
   return (
     <>
       <Hero>
-        <Banner title="Homescape" subtitle="Browse Real Estate developers">
+        <Banner
+          title="Homescape"
+          subtitle="Search for your new home improvement!"
+        >
           <Link to="/rooms" className="btn-primary">
             Portfolios
           </Link>

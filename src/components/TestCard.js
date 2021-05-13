@@ -9,17 +9,16 @@ export default function TestCard({ room }) {
   console.log(room);
 
   return (
-    <li class="booking-card">
+    <li class="booking-card img-container">
       {/* here figutre out how to add image */}
       <div class="book-container">
-        {/* <div className="img-container">
-          <img src={images[0]} alt="single room" />
-        </div> */}
         <div class="content">
           <button class="btn">
             <Link to={`/rooms/${slug}`}>More Info</Link>
           </button>
         </div>
+
+        <img src={images[0]} alt="single room" />
       </div>
 
       <div class="informations-container">

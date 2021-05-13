@@ -9,7 +9,7 @@ const Rooms = () => {
   return (
     <div>
       <Hero hero="roomsHero">
-        <Banner title="Real Estate Developers">
+        <Banner title="Professional Real Estate Services">
           <Link to="/" className="btn-primary">
             Return Home
           </Link>

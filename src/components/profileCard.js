@@ -10,7 +10,7 @@ export default function profileCard({ room }) {
   console.log(room);
   return (
     <article className="profilecard">
-      <div className="img-container">
+      <div className="featured-img-container">
         <img src={images[0] || defaultImg} alt="single room" />
         <div className="price-top">
           <h6>${price}</h6>
