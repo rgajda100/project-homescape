@@ -51,7 +51,13 @@ export default function RoomFilter({ rooms }) {
 
   return (
     <section className="filter-container">
-      <Title title="search Properties" />
+      <div className="search-title">
+        <h4>
+          Search for Design, Remodeling, Renovation, and Home Improvement
+          Services
+        </h4>
+        <div />
+      </div>
       <form className="filter-form">
         {/* Room Price */}
         <div className="form-group">

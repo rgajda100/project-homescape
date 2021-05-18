@@ -1,7 +1,7 @@
 $primaryColor: #96bbb2;
 $primaryColortwo: #af9a7d;
 $mainWhite: #fff;
-$offWhite: #f7f7f7;
+$offWhite: rgba(247, 247, 247, 0.75);
 $mainBlack: #222;
 $mainGrey: #ececec;
 $darkGrey: #cfcfcf;
@@ -11,7 +11,7 @@ $lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 $darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 
 //---------------------test css realm-------------------------
-$font: "Sofia", sans-serif;
+$font: "Playfair Display", serif;
 $font-size: 16px;
 $blue: #0a4870;
 $blue2: #e3ebf1;
@@ -260,7 +260,7 @@ ul {
 // }
 /* globals */
 body {
-  padding-top: 66px;
+  padding-top: 92px;
   color: $mainBlack;
   background: $mainWhite;
   //font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -407,6 +407,8 @@ h6 {
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .nav-links {
     height: auto;
@@ -438,14 +440,18 @@ h6 {
 /* Banner */
 .banner {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.5);
-  color: $mainWhite;
+  background: $offWhite;
+  color: $primaryColor;
   padding: 2rem 1rem;
   text-align: center;
   text-transform: capitalize;
   letter-spacing: $mainSpacing;
+  border-style: solid;
+  border-color: $primaryColor;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   h1 {
     font-size: 2.5rem;
+    text-shadow: 2px 2px 4px #000000;
   }
   div {
     width: 10rem;
@@ -491,6 +497,26 @@ h6 {
   }
 }
 /* End of Banner */
+/*Search Section title*/
+.search-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  h4 {
+    font-size: 20px;
+    padding-top: 10px;
+    letter-spacing: $mainSpacing;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+  div {
+    width: 5rem;
+    height: 5px;
+    margin: 0 auto;
+    background: $primaryColor;
+  }
+}
+
+/*End of Search section title*/
 /* Title */
 .section-title {
   text-align: center;
@@ -735,12 +761,12 @@ h6 {
   transform: scale(0);
   transition: all 0.3s linear;
 }
-.img-container:hover {
-  //background: rgba(0, 0, 0, 0.8);
-}
-.img-container:hover img {
-  //opacity: 0.3;
-}
+// .img-container:hover {
+//   //background: rgba(0, 0, 0, 0.8);
+// }
+// .img-container:hover img {
+//   //opacity: 0.3;
+// }
 .img-container:hover .price-top {
   opacity: 0;
 }

@@ -1,7 +1,7 @@
 //profilecard is the same as room.js
 import React from "react";
 import { Link } from "react-router-dom";
-import defaultImg from "../images/room-1.jpeg";
+import defaultImg from "../images/tile_background.jpg";
 import PropTypes from "prop-types";
 
 export default function profileCard({ room }) {

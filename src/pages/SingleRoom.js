@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import defaultBcg from "../images/room-1.jpeg";
+import defaultBcg from "../images/tile_background.jpg";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
@@ -65,12 +65,12 @@ export default class SingleRoom extends Component {
           </div>
           <div className="single-room-info">
             <article className="desc">
-              <h3>details</h3>
+              <h3>About {name}</h3>
               <p>{description}</p>
             </article>
 
             <article className="info">
-              <h3>info</h3>
+              <h3>Info:</h3>
               <h6>price: ${price}</h6>
               <h6>size: {size} SQFT</h6>
               <h6>
@@ -83,7 +83,7 @@ export default class SingleRoom extends Component {
           </div>
         </section>
         <section className="room-extras">
-          <h6>extras</h6>
+          <h6>Contact</h6>
           <ul className="extras">
             {extras.map((item, index) => {
               return <li key={index}>- {item}</li>;

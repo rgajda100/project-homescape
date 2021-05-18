@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default function TestCard({ room }) {
-  const { name, slug, images, price } = room;
+  const { name, slug, type, images, price } = room;
 
   console.log(room);
 
@@ -23,7 +23,7 @@ export default function TestCard({ room }) {
 
       <div class="informations-container">
         <h2 class="title">{name}</h2>
-        <p class="sub-title">Real Estate Development</p>
+        <p class="sub-title">{type}</p>
         <p class="price">${price}</p>
 
         <div class="more-information">
@@ -52,6 +52,7 @@ TestCard.propTypes = {
   room: PropTypes.shape({
     name: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
+    type: PropTypes.string.isRequired,
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
     price: PropTypes.number.isRequired,
   }),
