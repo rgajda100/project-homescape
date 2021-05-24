@@ -23,6 +23,7 @@ Download the current version of the project:
 ## Running the Project
 
 ```
+Open project-homescape in terminal and follow the commands.
 Use this code the first time you run the project:
 
 1. cd project-homescape
@@ -34,7 +35,8 @@ Use this code the first time you run the project:
 ```
 
 
-Once you have express running go to:
+The application should begin to load and after a minute automatically open a new tab in your browser and open your local host server to Homescape.
+If the app doesn't open just type the below links into URL box to access it:
 
 http://127.0.0.1:3000/ 
 or
