@@ -3,13 +3,13 @@
 CS370 Software Engineering Project: Homescape
 # Homescape
 
-Homescape is a stand-alone/entertainment application that provides a central hub for anything real estate development design related. It allows users to the use of the internal search engine to create an aggregated list of all professional services that potential clients can choose from for their next home improveent project.
+Homescape is a stand-alone/entertainment application that provides a central hub for anything real estate development design related. It allows users to access to the internal search engine inorder to create an aggregated list of all professional services that potential clients can choose from for their next home improvement project.
 
 # Full Stack (Frontend/Backend) Base Code
 
 Front End: HTML/CSS/Javascript React.Js
 
-Back End: Contentfuk, Local Dataset
+Back End: Contentful, Local Dataset
 
 ## Initial Project Setup
 
